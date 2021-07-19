@@ -2,19 +2,14 @@ def trainModels(self):
 
   ##### Model Structure ####
   model = Sequential()
-  model.add(CuDNNLSTM(64, input_shape = (self.train_x.shape[1:]), return_sequences=True))
+  model.add(CuDNNLSTM(128, input_shape = (self.train_x.shape[1:]), return_sequences=True))
   model.add(Dropout(0.1))
   model.add(BatchNormalization())
 
   model.add(CuDNNLSTM(128, input_shape = (self.train_x.shape[1:]), return_sequences=True))
   model.add(Dropout(0.2))
-  model.add(BatchNormalization())
 
-  model.add(CuDNNLSTM(128, input_shape = (self.train_x.shape[1:]), return_sequences=True))
-  model.add(Dropout(0.2))
-  model.add(BatchNormalization())
-
-  model.add(CuDNNLSTM(64, input_shape = (self.train_x.shape[1:])))
+  model.add(CuDNNLSTM(128, input_shape = (self.train_x.shape[1:])))
   model.add(Dropout(0.1))
   model.add(BatchNormalization())
 

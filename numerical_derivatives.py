@@ -5,7 +5,7 @@ df = pd.read("your_dataset.csv")
 #15 period SMA
 df['15MA'] = df['close'].rolling(window=sma_window).mean()
 
-#creating the data point needed for difference methods
+#creating the data points needed for difference methods
 df['f(xi-1)'] = df['15MA'].shift(1)
 df['f(xi-2)'] = df['15MA'].shift(2)
 df['f(xi-3)'] = df['15MA'].shift(3)

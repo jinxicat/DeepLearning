@@ -1,6 +1,6 @@
 #This script will use advanced methods to minimize the loss from the objective function
 #roi = loss and sim() = objective()
-#roi is returned as a negative because we want to maximize return on investment
+#roi is returned as a negative because we want to maximize return on investment by minimizing the loss
 
 from hyperopt import fmin, tpe, hp
 

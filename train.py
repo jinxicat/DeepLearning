@@ -1,3 +1,8 @@
+##### This is where the neural network structure is defined
+##### I want to use hyperopt optimization to optimize number of layers, nodes per layer, and dropout
+##### This particular network has 3 hidden layers
+##### train_x is a list of sequences and train_y is a list of targets
+
 def trainModels(self):
 
   ##### Model Structure ####
